@@ -1,0 +1,100 @@
+@import "../styles/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: var(--color-text);
+    background-color: var(--color-background);
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    color: #264653;
+    background-color: #F8F7F2;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), Georgia, serif;
+    color: #264653;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #2A9D8F;
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: #E9C46A;
+    color: #264653;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Editorial Link hover underline animation */
+  .editorial-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease-in-out;
+  }
+  .editorial-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 1.5px;
+    background-color: #2A9D8F;
+    transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .editorial-link:hover {
+    color: #2A9D8F;
+  }
+  .editorial-link:hover::after {
+    width: 100%;
+  }
+
+  /* Subtle card elevation & border transition */
+  .editorial-card {
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.25s ease;
+  }
+  .editorial-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(38, 70, 83, 0.06), 0 8px 10px -6px rgba(38, 70, 83, 0.04);
+    border-color: rgba(42, 157, 143, 0.3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
