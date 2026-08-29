@@ -51,12 +51,12 @@ export default function HomePage() {
             <MapPin className="h-3.5 w-3.5 text-strong-accent" />
             <span>Saltoro Valley, Gilgit-Baltistan</span>
           </div>
-          
+
           {/* Main Name (Dominant Typographic Anchor) */}
           <h1 className="font-display text-hero-name font-normal tracking-tight text-primary leading-[1.02]">
             Samina Batool
           </h1>
-          
+
           {/* Role Subtitle */}
           <p className="mt-5 font-display text-2xl sm:text-3xl lg:text-4xl text-primary font-normal leading-snug max-w-2xl text-balance">
             Community Development<br className="hidden sm:inline" /> Practitioner & Education Reform Advocate
@@ -106,7 +106,7 @@ export default function HomePage() {
         <Container size="editorial">
           <SectionHeading
             eyebrow="Quantitative Indicators"
-            title="Verified Impact at a Glance"
+            title="Verified Impact at a Ghanche"
             subtitle="Every indicator below is traceable to a specific project report, field evaluation, or institutional record."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -255,11 +255,11 @@ export default function HomePage() {
                       {project.period}
                     </span>
                   </div>
-                  
+
                   <h3 className="font-display text-2xl font-normal text-primary leading-snug">
                     {project.title}
                   </h3>
-                  
+
                   <p className="mt-1.5 text-caption font-semibold text-secondary">
                     {project.tagline}
                   </p>
