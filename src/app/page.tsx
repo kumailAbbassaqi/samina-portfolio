@@ -44,7 +44,7 @@ export default function HomePage() {
   return (
     <>
       {/* ===== 01. EDITORIAL HERO SECTION ===== */}
-      <section className="relative overflow-hidden border-b border-surface-border bg-background pt-14 pb-18 sm:pt-20 sm:pb-28 lg:pt-24 lg:pb-32 font-sans">
+      <section className="relative overflow-hidden border-b border-surface-border bg-background pt-14 pb-18 sm:pt-20 sm:pb-28 lg:pt-4 lg:pb-32 font-sans">
         <Container size="reading" className="text-center flex flex-col items-center">
           {/* Location Badge */}
           <div className="inline-flex items-center gap-1.5 text-caption font-semibold uppercase tracking-widest text-strong-accent mb-6">
